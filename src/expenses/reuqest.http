@@ -1,0 +1,2 @@
+### Get all expenses
+GET http://localhost:3014/all

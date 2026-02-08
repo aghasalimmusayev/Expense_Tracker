@@ -1,4 +1,4 @@
-import { BaseEntity, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class CommonEntity extends BaseEntity {
@@ -8,6 +8,6 @@ export class CommonEntity extends BaseEntity {
     @CreateDateColumn()
     creaetedAt: Date
 
-    @CreateDateColumn()
-    updatedAt: Date
+    @Column({ type: 'datetime', nullable: true, default: null })
+    updatedAt: Date | null
 }

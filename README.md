@@ -30,7 +30,7 @@ This App is created using NestJS, TypeORM
     - If doesnt exists => UnauthorizedException
     - If exists => return true
 
-### UserController
+### Users
 * user.controller.ts
     - GetAllUsers
     - FindUser
@@ -44,7 +44,17 @@ This App is created using NestJS, TypeORM
 ### Interceptors
 * serialize.inteceptor.ts
     - Response manupilated into UserDto to hide password
-* current-user.terceptor.ts
+* current-user.iterceptor.ts
     - Give the currentUser to Request
 
+
+### ExpenseController
+* expense.controller.ts
+    - Get all expenses by user
+    - Create expense by user(CreateExpenseDto)
+    - Find expense by user and id from Params
+    - Update expense by user and id from Params(UpdateExpenseDto)
+    - Delete expense by user and id from Params
+    ** UserId comes from CurrentUser(From decorator)
+    ** All routes check Authentification with AuthGuard
 

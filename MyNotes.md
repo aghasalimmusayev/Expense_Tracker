@@ -12,4 +12,8 @@ mhd123456
 * user.controller.ts
     - @Serialize(UserDto) butun controllere aiddi, yalnis patch-da @Serizlize(MessageDto) vermisem, 
     amma UserDto-ya gore netice gelir
+
+### UnCompleted task
+* expense.service & expense.controller
+    - getTotal()-bu service,controller qalib
     

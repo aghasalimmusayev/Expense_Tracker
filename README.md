@@ -31,4 +31,20 @@ This App is created using NestJS, TypeORM
     - If exists => return true
 
 ### UserController
+* user.controller.ts
     - GetAllUsers
+    - FindUser
+    - DeleteUserById
+    - UpdatePassword
+
+### Decorators
+* current-user.decorator.ts
+    - Get the currentUser from Request
+
+### Interceptors
+* serialize.inteceptor.ts
+    - Response manupilated into UserDto to hide password
+* current-user.terceptor.ts
+    - Give the currentUser to Request
+
+

@@ -36,4 +36,10 @@ export class ExpensesService {
         this.repo.remove(expense)
         return { message: 'The expense has been removed' }
     }
+
+    async getTotalExpenses(userId: number) {
+        const expenses = await this.repo.find({ where: { userId } })
+        const total = expenses.reduce((acc, item) => acc + Number(item.amount), 0)
+        return { TotalAmoun: total }
+    }
 }

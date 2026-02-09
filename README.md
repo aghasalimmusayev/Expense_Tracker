@@ -55,6 +55,68 @@ This App is created using NestJS, TypeORM
     - Find expense by user and id from Params
     - Update expense by user and id from Params(UpdateExpenseDto)
     - Delete expense by user and id from Params
+    - Get total expenses.amount
     ** UserId comes from CurrentUser(From decorator)
     ** All routes check Authentification with AuthGuard
 
+### Folder structure
+    ├── src
+    │   ├── auth
+    │   │   ├── auth.controller.spec.ts
+    │   │   ├── auth.controller.ts
+    │   │   ├── auth.module.ts
+    │   │   ├── auth.service.spec.ts
+    │   │   └── auth.service.ts
+    │   ├── common
+    │   │   ├── commonEntity.ts
+    │   │   ├── expense.entity.ts
+    │   │   └── user.entity.ts
+    │   ├── decorators
+    │   │   └── current-user.decorator.ts
+    │   ├── expenses
+    │   │   ├── dtos
+    │   │   │   ├── createExpenseDto.ts
+    │   │   │   └── updateExpenseDto.ts
+    │   │   ├── expenses.controller.spec.ts
+    │   │   ├── expenses.controller.ts
+    │   │   ├── expenses.module.ts
+    │   │   ├── expenses.service.spec.ts
+    │   │   ├── expenses.service.ts
+    │   │   └── reuqest.http
+    │   ├── guard
+    │   │   └── auth.guard.ts
+    │   ├── interceptors
+    │   │   ├── current-user.interceptor.ts
+    │   │   └── serialize.inteceptor.ts
+    │   ├── types
+    │   │   └── types.ts
+    │   ├── users
+    │   │   ├── dtos
+    │   │   │   ├── createUserDto.ts
+    │   │   │   ├── message.dto.ts
+    │   │   │   ├── updateUserDto.ts
+    │   │   │   └── user.dto.ts
+    │   │   ├── request.http
+    │   │   ├── user.controller.spec.ts
+    │   │   ├── user.controller.ts
+    │   │   ├── user.module.ts
+    │   │   ├── user.service.spec.ts
+    │   │   └── user.service.ts
+    │   ├── app.controller.spec.ts
+    │   ├── app.controller.ts
+    │   ├── app.module.ts
+    │   ├── app.service.ts
+    │   └── main.ts
+    ├── test
+    │   ├── app.e2e-spec.ts
+    │   └── jest-e2e.json
+    ├── .gitignore
+    ├── .prettierrc
+    ├── MyNotes.md
+    ├── README.md
+    ├── db.sqlite
+    ├── eslint.config.mjs
+    ├── nest-cli.json
+    ├── package-lock.json
+    ├── package.json
+    └── tsconfig.json

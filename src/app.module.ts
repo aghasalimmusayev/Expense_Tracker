@@ -2,11 +2,9 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
-import { AuthController } from './auth/auth.controller';
 import { UserModule } from './users/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './common/user.entity';
-import { ExpensesController } from './expenses/expenses.controller';
 import { ExpensesModule } from './expenses/expenses.module';
 import { Expense } from './common/expense.entity';
 

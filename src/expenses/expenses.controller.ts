@@ -22,6 +22,11 @@ export class ExpensesController {
         return expense
     }
 
+    @Get('/total')
+    async getTotalAmount(@CurrentUser() user: User) {
+        return await this.expenseService.getTotalExpenses(user.id)
+    }
+
     @Get('/:id')
     async findExpenseById(@Param('id', ParseIntPipe) id: number, @CurrentUser() user: User) {
         return await this.expenseService.findExpense(id, user.id)

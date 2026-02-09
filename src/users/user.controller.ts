@@ -36,7 +36,7 @@ export class UsersController {
 
     @UseGuards(AuthGuard)
     @Patch('/')
-    @Serialize(MessageDto)
+    @Serialize(MessageDto) //! MessageDto ile islemir, UserDto bunu usteleyir
     updateUser(@CurrentUser() user: User, @Body() body: UpdateUserDto) {
         return this.userService.updateUser(Number(user.id), body.password)
     }
